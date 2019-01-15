@@ -1,0 +1,6 @@
+Codul incepe cu comanda print(__doc__)care listeaza modulul docstring. In cazul in care __doc__ nu ar fi specificat, atunci de default ar fi None.
+
+Se importa pachetele precum NumPy pentru a putea apela clasele de care avem nevoie pentru a vizualiza datele returnate.
+
+In primele trei parti din intreg codul, observam ca datele de intrare nu sunt conforme cu o prezumtie implicita asa cum metoda k-means o face si astfel ne returneaza niste clustere nedorite. 
+In ultima diagrama, observam ca metoda k-means ne returneaza niste clusterele intuitive, in ciuda dimensiunilor inegale a punctelor pe care le observam in imagine.
