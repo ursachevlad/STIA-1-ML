@@ -1,0 +1,9 @@
+# Proiectul il voi prezenta/transpune si in Jupyter notebook pentru a vedea graficele
+
+# Loading and Handling TS in Pandas
+# import pandas as pd import numpy as np import matplotlib.pylab as plt %matplotlib inline from matplotlib.pylab import rcParams rcParams['figure.figsize'] = 15, 6
+
+data = pd.read_csv('/C:/1._D/2._STIA_-_Master_Sibiu/4._Machine_Learning/1._Proiect/FB.csv') 
+print data.head()
+print '\n Data Types:'
+print data.dtypes
