@@ -7,3 +7,37 @@ data = pd.read_csv('/C:/1._D/2._STIA_-_Master_Sibiu/4._Machine_Learning/1._Proie
 print data.head()
 print '\n Data Types:'
 print data.dtypes
+
+# Reading as datetime format
+dateparse = lambda dates: pd.datetime.strptime(dates, '%Y-%m-%d')
+# dateparse('1962-01')
+data = pd.read_csv('/C:/1._D/2._STIA_-_Master_Sibiu/4._Machine_Learning/1._Proiect/FB.csv', parse_dates='date', 
+\
+                   index_col='date',date_parser=dateparse)
+print data.head()
+
+#check datatype of index
+data.index
+
+#convert to time series:
+ts = data['adj_close']
+ts.head(10)
+
+# Indexing TS arrays
+#1. Specific the index as a string constant:
+ts['2012-05-18']
+
+#2. Import the datetime library and use 'datetime' function:
+from datetime import datetime
+ts[datetime(2015, 3, 26)]
+
+#Get range
+#1. Specify the entire range:
+ts['2012-05-18':'2015-03-26']
+
+#2. Use ':' if one of the indices is at ends:
+ts[:'2015-03-26']
+
+#All rows of 1962:
+ts['2012']
+
